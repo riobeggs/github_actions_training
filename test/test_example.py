@@ -11,11 +11,7 @@ class ExampleTest(unittest.TestCase):
         # Arrange
         very_big_number = 2001
 
-        # Act
-        result = get_message(very_big_number)
-
-        # Assert
-        self.assertIsInstance(result, str)
+        self.assert_get_message_returns_string(very_big_number)
 
     def test2(self):
         """
@@ -24,11 +20,7 @@ class ExampleTest(unittest.TestCase):
         # Arrange
         very_small_number = 1999
 
-        # Act
-        result = get_message(very_small_number)
-
-        # Assert
-        self.assertIsInstance(result, str)
+        self.assert_get_message_returns_string(very_small_number)
 
     def test3(self):
         """
@@ -37,8 +29,11 @@ class ExampleTest(unittest.TestCase):
         # Arrange
         exactly_2000 = 2000
 
+        self.assert_get_message_returns_string(exactly_2000)
+
+    def assert_get_message_returns_string(self, value: int):
         # Act
-        result = get_message(exactly_2000)
+        result = get_message(value)
 
         # Assert
         self.assertIsInstance(result, str)
