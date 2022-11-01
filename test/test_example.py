@@ -37,3 +37,18 @@ class ExampleTest(unittest.TestCase):
 
         # Assert
         self.assertIsInstance(result, str)
+
+    def test4(self):
+        """
+        Assert that when value is less than 2000 get_message() returns "value is less than 2000"
+        """
+        # Arrange
+        value = 0
+        expected = "value is less than 2000"
+
+        # Act
+        actual = get_message(value)
+
+        # Assert
+        self.assertEqual(actual, expected)
+
