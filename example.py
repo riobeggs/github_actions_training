@@ -4,3 +4,5 @@ def get_message(value: int):
 
     if value > 2000:
         return "value is over 2000"
+
+    return "value is 2000"
