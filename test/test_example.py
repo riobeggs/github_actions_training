@@ -43,7 +43,7 @@ class ExampleTest(unittest.TestCase):
         Assert that when value is less than 2000 get_message() returns "value is less than 2000"
         """
         # Arrange
-        value = 0
+        value = 20000
         expected = "value is less than 2000"
 
         # Act
